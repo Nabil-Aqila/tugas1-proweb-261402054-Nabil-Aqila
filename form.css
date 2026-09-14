@@ -1,0 +1,123 @@
+/* form.css - Styling untuk Form Daftar */
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f2f6f5;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+form {
+    background-color: #ffffff;
+    width: 420px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Fieldset & legend */
+fieldset {
+    border: 1px solid #a5d6a7;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: #2e7d32;
+    padding: 0 8px;
+}
+
+/* Label */
+label {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    color: #333;
+}
+
+/* Input text & password */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #a5d6a7;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+    font-family: inherit;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #2e7d32;
+    box-shadow: 0 0 4px rgba(46, 125, 50, 0.5);
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #a5d6a7;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: vertical;
+    font-family: inherit;
+}
+
+/* Select */
+select {
+    padding: 6px 8px;
+    margin: 6px 0 10px 0;
+    border: 1px solid #a5d6a7;
+    border-radius: 5px;
+    background-color: #fff;
+    font-family: inherit;
+}
+
+/* Radio button & checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 6px;
+    accent-color: #2e7d32;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    margin-right: 15px;
+}
+
+/* Tombol submit & reset */
+input[type="submit"],
+input[type="reset"] {
+    margin-top: 15px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"] {
+    background-color: #2e7d32;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #1b5e20;
+}
+
+input[type="reset"] {
+    background-color: #e0e0e0;
+    color: #333;
+    margin-left: 8px;
+}
+
+input[type="reset"]:hover {
+    background-color: #bdbdbd;
+}
