@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkukator Sederhana</title>
+    <style>
+        body { font-family: Georgia, serif; padding: 24px; }
+        .box { max-width: 460px; border: 1px solid #888; padding: 16px; }
+        .row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px;}
+        .row label { width: 140px; font-size: 18px; }
+        .row input { flex: 1; padding: 8px; font-size: 16px; min-width: 0; }
+        .ops { display: flex; gap: 8px; margin: 0 0 12px 152px; }
+        .ops button { width: 48px; height: 40px; font-size: 18px; cursor: pointer; }
+        #output { background: #f2f2f2; } 
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="row">
+            <label for="bil1">Input Bilangan 1</label>
+            <input type="number" id="bil1" step="any">
+        </div>
+        <div class="row">
+             <label for="bil2">Input Bilangan 2</label>
+      <input type="number" id="bil2" step="any">
+    </div>
+
+    <div class="ops">
+      <button onclick="hitung('+')">+</button>
+      <button onclick="hitung('-')">-</button>
+      <button onclick="hitung('*')">x</button>
+      <button onclick="hitung('/')">/</button>
+    </div>
+
+    <div class="row">
+      <label for="output">Output</label>
+      <input type="text" id="output" readonly>
+    </div>
+  </div>
+
+  <script>
+    function hitung(operator) {
+      // Ambil isi kedua input, ubah dari teks jadi angka
+      const a = parseFloat(document.getElementById("bil1").value);
+      const b = parseFloat(document.getElementById("bil2").value);
+      const output = document.getElementById("output");
+
+      // Validasi: kedua kolom harus berisi angka
+      if (isNaN(a) || isNaN(b)) {
+        output.value = "Isi kedua bilangan dulu";
+        return;
+      }
+
+      let hasil;
+      switch (operator) {
+        case "+": hasil = a + b; break;
+        case "-": hasil = a - b; break;
+        case "*": hasil = a * b; break;
+        case "/":
+          if (b === 0) {
+            output.value = "Tidak bisa dibagi 0";
+            return;
+          }
+          hasil = a / b;
+          break;
+      }
+
+      output.value = hasil;
+    }
+  </script>
+        </div>
+
+    </div>
+</body>
+</html>
